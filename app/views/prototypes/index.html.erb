@@ -8,7 +8,11 @@
     <% end %>
     
     <div class="card__wrapper">
-      <%= render partial: 'prototypes/prototype', collection: @prototypes %>
+      <% @prototypes.each do |prototype| %>
+         <div class="card">
+            <%= link_to prototype.user.name, user_path(prototype.user) %>
+        </div>
+      <% end %>
     </div>
   </div>
 </main>
