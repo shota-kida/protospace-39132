@@ -10,10 +10,12 @@
     <div class="card__wrapper">
       <% @prototypes.each do |prototype| %>
          <div class="card">
-            <%= image_tag prototype.image %>
-            <h3><%= prototype.title %></h3>
+           <%= link_to prototype_path(prototype) do %>
+              <%= image_tag prototype.image %>
+              <h3><%= prototype.title %></h3>
+            <% end %>
             <p><%= prototype.catch_copy %></p>
-            <%= link_to prototype.user.name, user_path(prototype.user) %>
+            <p><%= link_to prototype.user.name, user_path(prototype.user) %></p>
         </div>
       <% end %>
     </div>
