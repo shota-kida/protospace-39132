@@ -21,8 +21,5 @@
 
   <div class="actions">
     <%= f.submit "保存する", class: :form__btn  %>
-    <% if @prototype.persisted? %>
-      <%= link_to 'プロトタイプ詳細ページへ', prototype_path(@prototype), class: 'btn btn-primary' %>
-    <% end %>
   </div>
 <% end %>
