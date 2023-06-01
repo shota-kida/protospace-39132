@@ -12,7 +12,7 @@
         </div>
       <% else %>
         <p class="prototype__user">
-          by <%= link_to @prototype.user.name, user_path(@prototype.user) %>
+          by <%= link_to @prototype.user.name, user_path(@prototype.user.id) %>
         </p>
       <% end %>
       <div class="prototype__image">
